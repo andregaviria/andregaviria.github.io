@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FastSpring test page AGAVIRIA</title>
-    <script
-    id="fsc-api"
-    src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.3/fastspring-builder.min.js"
-    type="text/javascript"
-    data-storefront="testcompanyagstore1.qa.onfastspring.com/popup-oldversion">
-    var s = {
+   <script>
+	    var s = {
 	    'paymentMethod':paypal,
 	    'checkout': true,
     }
     fastspring.builder.push(s),
-    //fastspring.builder.payment("paypal") 
+    fastspring.builder.payment("paypal") 
        
-	<a href="#" data-fsc-action="Add,Checkout,PaypalCheckout" data-fsc-item-path-value="digital-only-list">Checkout</a>    
+	<a href="#" data-fsc-action="Add,Checkout,PaypalCheckout" data-fsc-item-path-value="digital-only-list">Checkout</a>   
+	   
+	</script>
+		
+	<script
+    id="fsc-api"
+    src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.3/fastspring-builder.min.js"
+    type="text/javascript"
+    data-storefront="testcompanyagstore1.qa.onfastspring.com/popup-oldversion">
+    
 	    
     </script>
 </head>
@@ -24,8 +29,6 @@
    
 <h1>Test Page AGAVIRIA</h1>
 <p>This is a testing page fo directly PayPal checkout</p>
-
-
 
 </body>
 </html>

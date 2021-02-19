@@ -11,10 +11,13 @@ var fscSession = {
 	'products' : [
 					{
 						'path':'digital-only-list',
-						'quantity': 2
+						'quantity': 2, 
+						'paymentMethod':paypal,
+	    					'checkout': true
 					}
 	],
-	
+	fastspring.builder.push(s),
+    fastspring.builder.payment("paypal")
 }
 </script>	
 	
@@ -25,12 +28,12 @@ var fscSession = {
     type="text/javascript"
     data-storefront="testcompanyagstore1.qa.onfastspring.com/popup-oldversion">
     
-		var s = {
-	    'paymentMethod':paypal,
-	    'checkout': true,
+	//	var s = {
+	  //  'paymentMethod':paypal,
+	    //'checkout': true,
     }
-    fastspring.builder.push(s),
-    fastspring.builder.payment("paypal") 
+    //fastspring.builder.push(s),
+    //fastspring.builder.payment("paypal") 
   	    
     </script>
 </head>

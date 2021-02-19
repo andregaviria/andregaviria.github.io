@@ -10,7 +10,14 @@
     src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.3/fastspring-builder.min.js"
     type="text/javascript"
     data-storefront="testcompanyagstore1.qa.onfastspring.com/popup-oldversion">
-
+    var s = {
+	    'paymentMethod':paypal,
+	    'checkout': true,
+    }
+    fastspring.builder.push(s),
+    fastspring.builder.payment("paypal") 
+        
+        
     </script>
 </head>
 <body>

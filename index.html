@@ -4,37 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FastSpring test page AGAVIRIA</title>
-  
-<script>
-var fscSession = {
-	'reset': true,
-	'products' : [
-					{
-						'path':'digital-only-list',
-						'quantity': 2
-					}
-	],
-	'paymentMethod':paypal,
-	'checkout': true,
-	fastspring.builder.push(fscSession),
-    	fastspring.builder.payment("paypal"),
-	fastspring.builder.checkout() 
-}
-</script>	
-	
-	
+  	
 <script
     id="fsc-api"
     src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.3/fastspring-builder.min.js"
     type="text/javascript"
     data-storefront="testcompanyagstore1.qa.onfastspring.com/popup-oldversion">
     
-	//	var s = {
-	  //  'paymentMethod':paypal,
-	    //'checkout': true,
+	var s = {
+	   	'paymentMethod':paypal,
+	    	'checkout': true,
     }
-    //fastspring.builder.push(s),
-    //fastspring.builder.payment("paypal") 
+    fastspring.builder.push(s),
+    fastspring.builder.payment("paypal"),
+    fastspring.builder.checkout() 
   	    
     </script>
 </head>

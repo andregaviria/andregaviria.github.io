@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FastSpring test page AGAVIRIA</title>
-    <button data-fsc-action="PaypalCheckout">Checkout with PayPal</button>
+    	<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<title>FastSpring test page AGAVIRIA</title>
+    	<button data-fsc-action="PaypalCheckout">Checkout with PayPal</button>
 
 <script
-    id="fsc-api"
-    src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.3/fastspring-builder.min.js"
-    type="text/javascript"
-    data-storefront="testcompanyagstore1.qa.onfastspring.com/popup-oldversion">
+	id="fsc-api"
+    	src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.3/fastspring-builder.min.js"
+    	type="text/javascript"
+  	data-storefront="testcompanyagstore1.qa.onfastspring.com/popup-oldversion">
 </script>
 	
 <script>
 	var s = {
 	   	'paymentMethod': "paypal",
 		'checkout': true
-    }
+    	}
 	fastspring.builder.add('digital-only-list'),
 	fastspring.builder.payment("paypal"),
-    fastspring.builder.push(s)
+    	fastspring.builder.push(s)
 </script>	
 	
 </head>
 <body>
    
-<h1>Test Page AGAVIRIA</h1>
-<p>This is a testing page fo directly PayPal checkout</p>
+	<h1>Test Page AGAVIRIA</h1>
+	<p>This is a testing page fo directly PayPal checkout</p>
 
-<a href="#" data-fsc-action="Add,Checkout" data-fsc-item-path-value="digital-only-list">Checkout</a>
+	<a href="#" data-fsc-action="Add,Checkout" data-fsc-item-path-value="digital-only-list">Checkout</a>
 	
 </body>
 </html>

@@ -4,7 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FastSpring test page AGAVIRIA</title>
-  <button data-fsc-action="PaypalCheckout" data-fsc-item-path-value="digital-only-list" data-fsc-smartdisplay>Check Out with PayPal</button>
+    <button data-fsc-action="PaypalCheckout">Checkout with PayPal</button>
+	
+<script>
+var fscSession = {
+	'reset': true,
+	'products' : [
+					{
+						'path':'digital-only-product',
+						'quantity': 2
+					}
+	],
+}
+</script>	
 	
 <script
     id="fsc-api"
@@ -14,8 +26,8 @@
     
 	var s = {
 		'reset': true,
-	   	"paymentMethod": "paypal",
-		"checkout": "true"
+	   	'paymentMethod': paypal,
+		'checkout': true
     }
     fastspring.builder.push(s)
 	

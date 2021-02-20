@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FastSpring test page AGAVIRIA</title>
-    <button data-fsc-action="Add,PaypalCheckout">Checkout with PayPal</button>
+    <button data-fsc-action="PaypalCheckout">Checkout with PayPal</button>
 
 <script
     id="fsc-api"
@@ -18,9 +18,10 @@
 	   	'paymentMethod': "paypal",
 		'checkout': true
     }
-	fastspring.builder.add('digital-only-list'),
+	//fastspring.builder.add('digital-only-list'),
 	//fastspring.builder.payment("paypal"),
     fastspring.builder.push(s)
+	fastspring.builder.add('digital-only-list')
 </script>	
 	
 </head>
@@ -30,7 +31,6 @@
 <p>This is a testing page fo directly PayPal checkout</p>
 
 <a href="#" data-fsc-action="Add,Checkout" data-fsc-item-path-value="digital-only-list">Checkout</a>
-
 	
 </body>
 </html>

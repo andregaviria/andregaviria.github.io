@@ -18,21 +18,23 @@ var fscSession = {
 		'checkout': true
 	],
 }
-
-//	var s = {
-//	   	'paymentMethod': "paypal",
-//		'checkout': true
-//    }
-    fastspring.builder.push(fscSession)
-	
 </script>	
 	
-<script
+<script>
     id="fsc-api"
     src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.3/fastspring-builder.min.js"
     type="text/javascript"
     data-storefront="testcompanyagstore1.qa.onfastspring.com/popup-oldversion">
 </script>
+	
+<script>	
+	var s = {
+	   	'paymentMethod': "paypal",
+		'checkout': true
+    }
+    fastspring.builder.push(s)
+</script>	
+	
 </head>
 <body>
    

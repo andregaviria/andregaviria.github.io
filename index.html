@@ -11,9 +11,9 @@
 	   	'paymentMethod': "paypal",
 		'checkout': true
     	}
-	fastspring.builder.add('digital-only-list'),
+	//fastspring.builder.add('digital-only-list'),
 	//fastspring.builder.payment("paypal"),
-    	fastspring.builder.push(s)
+    	//fastspring.builder.push(s)
 </script>	
 	
 <script
@@ -21,7 +21,12 @@
     	src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.3/fastspring-builder.min.js"
     	type="text/javascript"
   	data-storefront="testcompanyagstore1.qa.onfastspring.com/popup-oldversion">
+	fastspring.builder.add('digital-only-list'),
+	//fastspring.builder.payment("paypal"),
+    	fastspring.builder.push(s)
 </script>	
+
+	
 	
 </head>
 <body>

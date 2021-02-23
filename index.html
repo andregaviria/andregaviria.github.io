@@ -8,17 +8,18 @@
 <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-medium.png" alt="Check out with PayPal" data-fsc-action="PaypalCheckout"/>
 <script type="text/javascript">
 document.addEventListener("DOMContentLoaded", function() {
+//	sessionStorage.setItem('user', user);
 		s =
 			{
-				'reset':true,
-				'products' : [
+				reset:true,
+				products : [
 					{
-						'path':'digital-only-list',
-						'quantity':1
+						path:'digital-only-list',
+						quantity:1
 					},
 				],
-				'checkout':true,
-        'paymentMethod': "paypal",
+				checkout:true,
+        paymentMethod: "paypal",
 			}
 			//Push the above JSON object to the Store Builder Library.
 			fastspring.builder.push(s);

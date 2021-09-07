@@ -7,11 +7,12 @@
 
 <script>
 fastspring.builder.reset();
-"email": “agaviria+paypal@fastspring.com",  
-"firstName":"Vlad",
-"lastName":"Tepes",  
-"country":"MY",  
-"phoneNumber":"8054444444"}) 
-fastspring.builder.add(“digital-list");
+fastspring.builder.recognize({ 
+    "email": “your_email@fastspring.com",  
+    "firstName":"Vlad",   
+    "lastName":"Tepes",  
+    "country":"MY",  
+    "phoneNumber":"8054444444"}) 
+fastspring.builder.add(“digital-only-list");
 fastspring.builder.payment("paypal");
 </script>

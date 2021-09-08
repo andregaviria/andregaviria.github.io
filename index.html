@@ -1,27 +1,59 @@
-<html>
-<head>
+<h2>To Complete A Purchase</h2>
+<p>You can use any date in the future for the card expiration date, and you can use any values for other purchase data such as your name, so long as you used the test card numbers shown below.</p>
+<ul>
+    <li>Card Number: 4242 4242 4242 4242</li>
+    <li>CVV Code: *E4FP</li>
+</ul>
+
+<!--
+    Configure an add button to add an item to the cart.
+-->
+<button onclick="fastspring.builder.checkout();">Checkout</button>
+
+<!--
+    DEMO EFFECTS
+        - The below div will be updated to include the returned data from the data-popup-webhook-received
+-->
+<br /><br />Data returned: <div id="log"></div>
+
+<br /><br />Error Data returned: <div id="log2"></div>
+
+<!--
+    DEMO SETUP
+        - Initialize the Store Builder Library
+-->
 <script
     id="fsc-api"
     src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.3/fastspring-builder.min.js"
     type="text/javascript"
-    data-storefront="testcompanyagstore2.qa.onfastspring.com/popup-producttesting">
+    storefront="testcompanyagstore2.qa.onfastspring.com/popup-producttesting"
+    data-popup-webhook-received="dataPopupWebhookReceived"
+    data-error-callback="dataErrorCallback"
+    data-continuous="true">
 </script>
-</head>
 
-<body>
+<!--
+    Initialize the cart for demo purposes g
+-->
 <script>
-fastspring.builder.reset();
-fastspring.builder.recognize(
-	{
-		"email":"agaviria+Paypal@fastspring.com",
-		"firstName":"Andrea2",
-		"lastName":"Gaviria",
-                "country": "MY",
-               	"phoneNumber": "123456789"
-	}
-);
-fastspring.builder.add("digital-only-list");
-fastspring.builder.payment("paypal");
+    fastspring.builder.reset();
+    fastspring.builder.recognize({"email": "agaviria+paypal@fastspring.com", "firstName":"Andrea", "lastName":"Gaviria", "country":"MY"})
+    fastspring.builder.add("digital-only-list");
+    fastspring.builder.payment("paypal");
 </script>
-</body>
-</html>
+
+<!--
+    dataPopupWebhookReceived
+        - In this example, it will write div with the id log with the returned data.
+-->
+<script>
+    function dataPopupWebhookReceived(data) {
+        document.getElementById("log").innerHTML = "<pre>"+JSON.stringify(data, null, 4)+"</pre>";
+    }
+</script>
+
+<script>
+    function dataErrorCallback(data) {
+        document.getElementById("log2").innerHTML = "<pre>"+JSON.stringify(data, null, 4)+"</pre>";
+    }
+</script>
